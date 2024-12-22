@@ -54,7 +54,7 @@ chunks = [section.strip() for section in sections if section.strip()]
 embeddings = model.encode(chunks)
 PINE_API_KEY=os.getenv("PINECONE_API_KEY")
 pc = Pinecone(
-        api_key=PINE_API_KEY
+        api_key=PINECONE_API_KEY
     )
 
 # Initialize Pinecone index
