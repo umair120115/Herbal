@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 import torch
 device = torch.device("cpu")
-model = torch.jit.load("model.pt", map_location="cpu")
+# model = torch.jit.load("model.pt", map_location="cpu")
 
 
 # Download necessary NLTK data
