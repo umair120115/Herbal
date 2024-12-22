@@ -8,7 +8,8 @@ import nltk
 from dotenv import load_dotenv
 load_dotenv()
 import torch
-torch.ops.load_library('path/to/your/extension.so')
+device = torch.device("cpu")
+model = torch.jit.load("model.pt", map_location="cpu")
 
 
 # Download necessary NLTK data
@@ -77,7 +78,7 @@ for i, emb in enumerate(embeddings):
     index.upsert([(f"chunk{i}", emb, {"text": chunks[i]})])
 
 # Load GPT model
-generator = pipeline("text-generation", model="EleutherAI/gpt-neo-1.3B")
+generator = pipeline("text-generation", model="EleutherAI/gpt-neo-1.3B", device=-1)
 
 # Streamlit app
 st.title("Personalized Assistant")
