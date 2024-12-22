@@ -7,6 +7,9 @@ from transformers import pipeline
 import nltk
 from dotenv import load_dotenv
 load_dotenv()
+import torch
+torch.ops.load_library('path/to/your/extension.so')
+
 
 # Download necessary NLTK data
 nltk.download('punkt')
