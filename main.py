@@ -10,6 +10,8 @@ load_dotenv()
 
 # Download necessary NLTK data
 nltk.download('punkt')
+PINECONE_API_KEY = st.secrets["PINECONE_API_KEY"]
+HF_TOKEN = st.secrets["HF_TOKEN"]
 
 # Initialize Pinecone
 # pinecone.init(api_key=os.getenv("PINECONE_API_KEY"))
