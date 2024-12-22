@@ -5,3 +5,6 @@ langchain
 pinecone-client
 nltk
 python-dotenv
+torch
+torchvision
+torchaudio
