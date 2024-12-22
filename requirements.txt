@@ -4,3 +4,4 @@ transformers
 langchain
 pinecone-client
 nltk
+python-dotenv
